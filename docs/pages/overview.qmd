@@ -39,5 +39,5 @@ foo(4, 2)
 
 Go [to the anvanced page](advanced.qmd) to learn how to ...
 
-* [Examples page](/examples/index.qmd): sites using quartodoc.
+* [Examples page](/examples/index.ipynb): sites using quartodoc.
 
