@@ -42,7 +42,6 @@ website:
         text: Examples
       - href: api/
         text: Reference
-
     right:
       - icon: github
         href: https://github.com/munch-group/libraryname/
@@ -56,7 +55,6 @@ website:
         - section: "Basic Use"
           contents:
             - pages/basics.qmd
-
         - section: "Advanced"
           contents:
             - pages/advanced.qmd
