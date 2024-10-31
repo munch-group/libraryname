@@ -12,8 +12,6 @@ execute:
   freeze: auto
   echo: true
 
-
-# tell quarto to read the generated sidebar
 metadata-files:
   - api/_sidebar.yml
 
@@ -58,7 +56,6 @@ website:
         - section: "Advanced"
           contents:
             - pages/advanced.qmd
-
 
 format:
   html:
