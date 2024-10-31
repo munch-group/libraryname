@@ -1,11 +1,11 @@
 {% set data = load_setup_py_data() %}
 
 package:
-  name: repositoryname
+  name: libraryname
   version: {{ data.get('version') }}  
 
 source:
-  git_url: https://github.com/munch-group/repositoryname.git
+  git_url: https://github.com/munch-group/libraryname.git
 
 build:
   # noarch: python
@@ -42,16 +42,16 @@ dependencies:   # Keep this block with only these two packages
   
 test:
   imports:
-    - repositoryname
+    - libraryname
   # commands:
   #   - exercises --help    
 
 about:
-  home: https://github.com/munch-group/repositoryname.git
+  home: https://github.com/munch-group/libraryname.git
   license: MIT
   # summary: "Blah blah"
   # description: |
   #   "Blah blah"
   #   "Blah blah"
-  dev_url: https://github.com/munch-group/repositoryname.git
-  doc_url: https://munch-group.org/repositoryname
+  dev_url: https://github.com/munch-group/libraryname.git
+  doc_url: https://munch-group.org/libraryname
