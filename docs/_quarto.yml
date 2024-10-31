@@ -60,6 +60,9 @@ website:
         - section: "Advanced"
           contents:
             - pages/advanced.qmd
+        - section: "Library reference"
+          contents:
+            - api/index.qmd
 
 format:
   html:
