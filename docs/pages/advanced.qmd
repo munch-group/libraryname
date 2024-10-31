@@ -1,77 +1,32 @@
 ---
-title: More customization
+title: Advanced use
+jupyter:
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
 ---
 
-This page details 3 common aspects of quartodoc you can extend:
+{{< lipsum 1 >}}
 
-* The reference index page generated (which lists all your functions).
-* The way docstrings are renderered.
-* The overall building process.
-
-
-## Using a custom index page
-
-Use a custom index page to add content before or after the automatically generated
-API index.
-
-You can do this by setting quartodoc's `out_index` to be something other than `index.qmd`,
-and then including it in a custom `index.qmd` file.
-
-First, set `out_index` in your `_quarto.yml`:
 
 ```yaml
-website:
-  navbar:
-    left:
-      - file: reference/index.qmd
-        text: Reference
-
-quartodoc:
-  dir: reference
-  out_index: reference/_api_index.qmd
+contents:
+  - MdRenderer
 ```
 
-Then, create the file `reference/index.qmd` to have the form:
-
-```bash
----
----
-
-Some custom content.
+{{< lipsum 1 >}}
 
 
-{{{< include /reference/_api_index.qmd >}}}
-
-
-More content stuff.
+```python
+foo(3, 4)
 ```
 
-Notice that the shortcode `{{< include ... >}}` is used to insert the index file generated
-by quartodoc (`_api_index.qmd`).
+## Some topic
 
+Finding Python objects to document involves two pieces of configuration:
 
-## Using a custom Renderer
+1.  the package name.
+2.  a list of objects for content.
 
-Use a custom renderer to add custom content after a renderered docstring, or
-to change the rendering process in general.
-
-You can do this by creating a custom file for your renderer in your docs folder, like `_renderer.py`,
-and then referencing it in your `_quarto.yml`.
-
-```yaml
-quartodoc:
-  renderer:
-    style: _renderer.py
-```
-
-See the [Rendering docstrings](/get-started/renderers.qmd) page for instructions on
-creating a custom renderer, and the [](`quartodoc.MdRenderer`) docs for more information.
-
-## Using a custom Builder
-
-Since the Builder controls the full quartodoc build process, using a custom builder
-provides total flexibility. This option currently isn't available, but would be easy
-to enable.
-
-Please leave a note on [this issue](https://github.com/machow/quartodoc/issues/34) if you
-need to use a custom builder.
+quartodoc can look up a wide variety of objects, including functions, modules, classes, attributes, and methods:
