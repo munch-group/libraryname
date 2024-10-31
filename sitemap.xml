@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://munch-group.github.io/libraryname/index.html</loc>
-    <lastmod>2024-10-31T14:26:07.612Z</lastmod>
+    <loc>https://munch-group.github.io/libraryname/api/foo.html</loc>
+    <lastmod>2024-10-31T20:02:54.996Z</lastmod>
   </url>
   <url>
-    <loc>https://munch-group.github.io/libraryname/data/Readme.html</loc>
-    <lastmod>2024-10-31T14:26:07.612Z</lastmod>
+    <loc>https://munch-group.github.io/libraryname/api/bar.baz.html</loc>
+    <lastmod>2024-10-31T20:02:54.996Z</lastmod>
   </url>
   <url>
-    <loc>https://munch-group.github.io/libraryname/scripts/Readme.html</loc>
-    <lastmod>2024-10-31T14:26:07.612Z</lastmod>
+    <loc>https://munch-group.github.io/libraryname/pages/overview.html</loc>
+    <lastmod>2024-10-31T20:02:54.996Z</lastmod>
   </url>
   <url>
-    <loc>https://munch-group.github.io/libraryname/notebooks/example.html</loc>
-    <lastmod>2024-10-31T14:26:07.612Z</lastmod>
+    <loc>https://munch-group.github.io/libraryname/examples/index.html</loc>
+    <lastmod>2024-10-31T20:02:54.996Z</lastmod>
+  </url>
+  <url>
+    <loc>https://munch-group.github.io/libraryname/about.html</loc>
+    <lastmod>2024-10-31T20:02:54.996Z</lastmod>
+  </url>
+  <url>
+    <loc>https://munch-group.github.io/libraryname/examples/dummy.html</loc>
+    <lastmod>2024-10-31T20:02:54.996Z</lastmod>
+  </url>
+  <url>
+    <loc>https://munch-group.github.io/libraryname/pages/advanced.html</loc>
+    <lastmod>2024-10-31T20:02:54.996Z</lastmod>
+  </url>
+  <url>
+    <loc>https://munch-group.github.io/libraryname/pages/basics.html</loc>
+    <lastmod>2024-10-31T20:02:54.996Z</lastmod>
+  </url>
+  <url>
+    <loc>https://munch-group.github.io/libraryname/api/index.html</loc>
+    <lastmod>2024-10-31T20:02:54.996Z</lastmod>
   </url>
 </urlset>
