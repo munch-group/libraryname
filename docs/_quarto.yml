@@ -36,8 +36,8 @@ website:
   page-navigation: true
   navbar:
     left:
-      - file: examples/
-        text: Examples
+      # - file: examples/
+      #   text: Examples
       - href: api/
         text: Reference
     right:
