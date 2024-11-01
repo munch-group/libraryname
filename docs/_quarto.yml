@@ -27,6 +27,8 @@ interlinks:
       url: https://mkdocstrings.github.io/griffe/
     numpy:
       url: https://numpy.org/doc/stable/
+    pandas:
+      url: https://pandas.pydata.org/docs/      
     # quartodoc-test:
     #   url: https://machow.github.io/quartodoc
     #   inv: objects-test.txt
