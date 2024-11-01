@@ -18,7 +18,7 @@ requirements:
   host:
     - python
     - pip
-  run:       # write here the list of libraries to look for your library dependencies
+  run:       # your library dependencies
     - python
     # - jupyter
     # - ipython
@@ -30,7 +30,7 @@ requirements:
     # - pytables
     # - wget
 
-channels:    # write here the list of channels to look for your library dependencies
+channels:    # your library dependencies
   # - uibcdf
   - conda-forge
   - default
