@@ -1,25 +1,33 @@
 
-def foo(x, y=1):
+def foo(x: int=1, y: int=1) -> int:
     """
     The sum of two numbers.
 
     Parameters
     ----------
-    x : int
+    x : 
         The first number
-    y: int, default=1
+    y :
         The second number.
 
     Returns
     -------
-    int
+    :
         Sum of two numbers.
 
-
+    Examples
+    --------
+    
+    Adding two numbers
+    
+    ```python
+    result = foo(2, 4)
+    ```
+    
     See Also
     --------
-    scripts.bar : "Printing hello world".     
-
+    [](`libraryname.scripts.bar`), [](`libraryname.foo`)
     """
+    
     return x + y
 
