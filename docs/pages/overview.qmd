@@ -26,9 +26,7 @@ conda install -c munch-group libraryname
 
 ## Some use case
 
-<!-- 
-The [foo function](`libraryname.foo`) does ... [](`libraryname.bar`) does ... [](`~libraryname.baz`) does ...
- -->
+The [foo function](`libraryname.foo`) does ... [](`libraryname.foo`) does ... [](`~libraryname.foo`) does ...
 
 {{< lipsum 1 >}}
 
