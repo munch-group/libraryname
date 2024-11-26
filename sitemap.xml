@@ -2,38 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://munch-group.github.io/libraryname/api/foo.html</loc>
-    <lastmod>2024-11-01T12:13:20.994Z</lastmod>
+    <lastmod>2024-11-26T12:00:17.530Z</lastmod>
   </url>
   <url>
     <loc>https://munch-group.github.io/libraryname/api/bar.baz.html</loc>
-    <lastmod>2024-11-01T12:13:20.994Z</lastmod>
+    <lastmod>2024-11-26T12:00:17.530Z</lastmod>
   </url>
   <url>
     <loc>https://munch-group.github.io/libraryname/pages/overview.html</loc>
-    <lastmod>2024-11-01T12:13:20.994Z</lastmod>
+    <lastmod>2024-11-26T12:00:17.530Z</lastmod>
   </url>
   <url>
     <loc>https://munch-group.github.io/libraryname/pages/something.html</loc>
-    <lastmod>2024-11-01T12:13:20.994Z</lastmod>
+    <lastmod>2024-11-26T12:00:17.534Z</lastmod>
   </url>
   <url>
     <loc>https://munch-group.github.io/libraryname/about.html</loc>
-    <lastmod>2024-11-01T12:13:20.990Z</lastmod>
+    <lastmod>2024-11-26T12:00:17.530Z</lastmod>
   </url>
   <url>
     <loc>https://munch-group.github.io/libraryname/pages/advanced.html</loc>
-    <lastmod>2024-11-01T12:13:20.994Z</lastmod>
+    <lastmod>2024-11-26T12:00:17.530Z</lastmod>
   </url>
   <url>
     <loc>https://munch-group.github.io/libraryname/pages/examples.html</loc>
-    <lastmod>2024-11-01T12:13:20.994Z</lastmod>
+    <lastmod>2024-11-26T12:00:17.530Z</lastmod>
   </url>
   <url>
     <loc>https://munch-group.github.io/libraryname/pages/basics.html</loc>
-    <lastmod>2024-11-01T12:13:20.994Z</lastmod>
+    <lastmod>2024-11-26T12:00:17.530Z</lastmod>
   </url>
   <url>
     <loc>https://munch-group.github.io/libraryname/api/index.html</loc>
-    <lastmod>2024-11-01T12:13:20.994Z</lastmod>
+    <lastmod>2024-11-26T12:00:17.530Z</lastmod>
   </url>
 </urlset>
