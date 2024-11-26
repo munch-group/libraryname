@@ -57,7 +57,7 @@ website:
             - pages/basics.qmd
         - section: "Examples"
           contents:
-            - pages/example.ipynb            
+            - pages/examples.ipynb            
             - pages/something.ipynb            
         - section: "Advanced"
           contents:
