@@ -2,9 +2,6 @@ project:
   type: website
   output-dir: _build
   resources:
-    - examples/single-page
-    - examples/pkgdown
-    - examples/auto-package
     # - objects.txt
     # - objects-test.txt
 
