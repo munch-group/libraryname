@@ -25,7 +25,13 @@ interlinks:
     numpy:
       url: https://numpy.org/doc/stable/
     pandas:
-      url: https://pandas.pydata.org/docs/      
+      url: https://pandas.pydata.org/docs/
+    matplotlib:
+      url: https://matplotlib.org/stable/
+    scipy:
+      url: https://docs.scipy.org/doc/scipy/
+    statsmodels:
+      url: https://www.statsmodels.org/stable/      
     # quartodoc-test:
     #   url: https://machow.github.io/quartodoc
     #   inv: objects-test.txt
