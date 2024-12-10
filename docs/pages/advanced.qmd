@@ -10,6 +10,8 @@ jupyter:
 {{< lipsum 1 >}}
 
 
+Some yaml: 
+
 ```yaml
 contents:
   - MdRenderer
