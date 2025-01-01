@@ -65,8 +65,8 @@ website:
         - section: "Advanced"
           contents:
             - pages/advanced.qmd
-        - href: api/
-          text: API reference              
+
+lightbox: true
 
 format:
   html:
@@ -75,6 +75,8 @@ format:
       - api/_styles-quartodoc.css
       - styles.css
     toc: true
+    mermaid:
+      theme: neutral     
 
 quartodoc:
   style: pkgdown
