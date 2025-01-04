@@ -8,7 +8,6 @@ source:
   git_url: https://github.com/munch-group/libraryname.git
 
 build:
-  # noarch: python
   number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
   # entry_points:
@@ -18,7 +17,7 @@ requirements:
   host:
     - python
     - pip
-  run:       # your library dependencies
+  run:  # your library dependencies
     - python
     # - jupyter
     # - ipython
@@ -30,7 +29,7 @@ requirements:
     # - pytables
     # - wget
 
-channels:    # your library dependencies
+channels:  # channels for your library dependencies
   # - uibcdf
   - conda-forge
   - default
@@ -43,15 +42,11 @@ dependencies:   # Keep this block with only these two packages
 test:
   imports:
     - libraryname
-  # commands:
-  #   - exercises --help    
+  commands:
+    - "{{ PYTHON }} -m unittest"
 
 about:
   home: https://github.com/munch-group/libraryname.git
   license: MIT
-  # summary: "Blah blah"
-  # description: |
-  #   "Blah blah"
-  #   "Blah blah"
   dev_url: https://github.com/munch-group/libraryname.git
   doc_url: https://munch-group.org/libraryname

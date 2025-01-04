@@ -1,4 +1,7 @@
 
+from collections.abc import Callable
+
+from typing import Any, TypeVar, List, Tuple, Dict, Union, Sequence, MutableSequence
 
 def scriptname():
     print("Hello, world!")
