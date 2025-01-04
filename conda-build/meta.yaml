@@ -43,7 +43,8 @@ test:
   imports:
     - libraryname
   commands:
-    - python -m unittest
+    - python -m pip install pytest -vv
+    - pytest test
 
 about:
   home: https://github.com/munch-group/libraryname.git
