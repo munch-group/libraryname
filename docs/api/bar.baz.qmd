@@ -1,6 +1,0 @@
-# bar.baz { #libraryname.bar.baz }
-
-```python
-libraryname.bar.baz()
-```
-

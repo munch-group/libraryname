@@ -1008,6 +1008,9 @@ PyFloat_Unpack4.p c:functionParam 1 c-api/float.html#c.PyFloat_Unpack4 -
 PyFloat_Unpack8 c:function 1 c-api/float.html#c.$ -
 PyFloat_Unpack8.le c:functionParam 1 c-api/float.html#c.PyFloat_Unpack8 -
 PyFloat_Unpack8.p c:functionParam 1 c-api/float.html#c.PyFloat_Unpack8 -
+PyFrameLocalsProxy_Check c:function 1 c-api/frame.html#c.$ -
+PyFrameLocalsProxy_Check.obj c:functionParam 1 c-api/frame.html#c.PyFrameLocalsProxy_Check -
+PyFrameLocalsProxy_Type c:member 1 c-api/frame.html#c.$ -
 PyFrameObject c:type 1 c-api/frame.html#c.$ -
 PyFrame_Check c:function 1 c-api/frame.html#c.$ -
 PyFrame_Check.obj c:functionParam 1 c-api/frame.html#c.PyFrame_Check -
@@ -2071,6 +2074,8 @@ PyObject_RichCompareBool c:function 1 c-api/object.html#c.$ -
 PyObject_RichCompareBool.o1 c:functionParam 1 c-api/object.html#c.PyObject_RichCompareBool -
 PyObject_RichCompareBool.o2 c:functionParam 1 c-api/object.html#c.PyObject_RichCompareBool -
 PyObject_RichCompareBool.opid c:functionParam 1 c-api/object.html#c.PyObject_RichCompareBool -
+PyObject_SelfIter c:function 1 c-api/object.html#c.$ -
+PyObject_SelfIter.obj c:functionParam 1 c-api/object.html#c.PyObject_SelfIter -
 PyObject_SetArenaAllocator c:function 1 c-api/memory.html#c.$ -
 PyObject_SetArenaAllocator.allocator c:functionParam 1 c-api/memory.html#c.PyObject_SetArenaAllocator -
 PyObject_SetAttr c:function 1 c-api/object.html#c.$ -
@@ -3095,6 +3100,10 @@ PyUnicode_WriteChar c:function 1 c-api/unicode.html#c.$ -
 PyUnicode_WriteChar.character c:functionParam 1 c-api/unicode.html#c.PyUnicode_WriteChar -
 PyUnicode_WriteChar.index c:functionParam 1 c-api/unicode.html#c.PyUnicode_WriteChar -
 PyUnicode_WriteChar.unicode c:functionParam 1 c-api/unicode.html#c.PyUnicode_WriteChar -
+PyUnstable_AtExit c:function 1 c-api/init.html#c.$ -
+PyUnstable_AtExit.data c:functionParam 1 c-api/init.html#c.PyUnstable_AtExit -
+PyUnstable_AtExit.func c:functionParam 1 c-api/init.html#c.PyUnstable_AtExit -
+PyUnstable_AtExit.interp c:functionParam 1 c-api/init.html#c.PyUnstable_AtExit -
 PyUnstable_Code_GetExtra c:function 1 c-api/code.html#c.$ -
 PyUnstable_Code_GetExtra.code c:functionParam 1 c-api/code.html#c.PyUnstable_Code_GetExtra -
 PyUnstable_Code_GetExtra.extra c:functionParam 1 c-api/code.html#c.PyUnstable_Code_GetExtra -
@@ -4618,7 +4627,12 @@ calendar.SUNDAY py:data 1 library/calendar.html#$ -
 calendar.THURSDAY py:data 1 library/calendar.html#$ -
 calendar.TUESDAY py:data 1 library/calendar.html#$ -
 calendar.TextCalendar py:class 1 library/calendar.html#$ -
+calendar.TextCalendar.formatday py:method 1 library/calendar.html#$ -
 calendar.TextCalendar.formatmonth py:method 1 library/calendar.html#$ -
+calendar.TextCalendar.formatmonthname py:method 1 library/calendar.html#$ -
+calendar.TextCalendar.formatweek py:method 1 library/calendar.html#$ -
+calendar.TextCalendar.formatweekday py:method 1 library/calendar.html#$ -
+calendar.TextCalendar.formatweekheader py:method 1 library/calendar.html#$ -
 calendar.TextCalendar.formatyear py:method 1 library/calendar.html#$ -
 calendar.TextCalendar.prmonth py:method 1 library/calendar.html#$ -
 calendar.TextCalendar.pryear py:method 1 library/calendar.html#$ -
@@ -5733,7 +5747,7 @@ dbm.sqlite3 py:module 0 library/dbm.html#module-$ -
 dbm.sqlite3.open py:function 1 library/dbm.html#$ -
 dbm.whichdb py:function 1 library/dbm.html#$ -
 decimal py:module 0 library/decimal.html#module-$ -
-decimal.BasicContext py:class 1 library/decimal.html#$ -
+decimal.BasicContext py:data 1 library/decimal.html#$ -
 decimal.Clamped py:class 1 library/decimal.html#$ -
 decimal.Context py:class 1 library/decimal.html#$ -
 decimal.Context.Etiny py:method 1 library/decimal.html#$ -
@@ -5857,9 +5871,9 @@ decimal.Decimal.to_integral py:method 1 library/decimal.html#$ -
 decimal.Decimal.to_integral_exact py:method 1 library/decimal.html#$ -
 decimal.Decimal.to_integral_value py:method 1 library/decimal.html#$ -
 decimal.DecimalException py:class 1 library/decimal.html#$ -
-decimal.DefaultContext py:class 1 library/decimal.html#$ -
+decimal.DefaultContext py:data 1 library/decimal.html#$ -
 decimal.DivisionByZero py:class 1 library/decimal.html#$ -
-decimal.ExtendedContext py:class 1 library/decimal.html#$ -
+decimal.ExtendedContext py:data 1 library/decimal.html#$ -
 decimal.FloatOperation py:class 1 library/decimal.html#$ -
 decimal.HAVE_CONTEXTVAR py:data 1 library/decimal.html#$ -
 decimal.HAVE_THREADS py:data 1 library/decimal.html#$ -
@@ -6384,6 +6398,8 @@ enum.EnumCheck py:class 1 library/enum.html#$ -
 enum.EnumCheck.CONTINUOUS py:attribute 1 library/enum.html#$ -
 enum.EnumCheck.NAMED_FLAGS py:attribute 1 library/enum.html#$ -
 enum.EnumCheck.UNIQUE py:attribute 1 library/enum.html#$ -
+enum.EnumDict py:class 1 library/enum.html#$ -
+enum.EnumDict.member_names py:attribute 1 library/enum.html#$ -
 enum.EnumType py:class 1 library/enum.html#$ -
 enum.EnumType.__call__ py:method 1 library/enum.html#$ -
 enum.EnumType.__contains__ py:method 1 library/enum.html#$ -
@@ -13225,6 +13241,7 @@ xml.sax.xmlreader.XMLReader.setErrorHandler py:method 1 library/xml.sax.reader.h
 xml.sax.xmlreader.XMLReader.setFeature py:method 1 library/xml.sax.reader.html#$ -
 xml.sax.xmlreader.XMLReader.setLocale py:method 1 library/xml.sax.reader.html#$ -
 xml.sax.xmlreader.XMLReader.setProperty py:method 1 library/xml.sax.reader.html#$ -
+xmlrpc py:module 0 library/xmlrpc.html#module-$ -
 xmlrpc.client py:module 0 library/xmlrpc.client.html#module-$ -
 xmlrpc.client.Binary py:class 1 library/xmlrpc.client.html#$ -
 xmlrpc.client.Binary.data py:attribute 1 library/xmlrpc.client.html#$ -
@@ -13765,7 +13782,7 @@ ZLIB_LIBS std:cmdoption 1 using/configure.html#cmdoption-arg-$ -
 Zen of Python std:term -1 glossary.html#term-Zen-of-Python -
 __future__ std:term -1 glossary.html#term-$ -
 __slots__ std:term -1 glossary.html#term-$ -
-about std:doc -1 about.html About these documents
+about std:doc -1 about.html About this documentation
 abstract std:label -1 c-api/abstract.html#$ Abstract Objects Layer
 abstract base class std:term -1 glossary.html#term-abstract-base-class -
 abstract-base-classes std:label -1 library/typing.html#$ Aliases to container ABCs in collections.abc
@@ -14102,6 +14119,7 @@ changelog std:label -1 whatsnew/changelog.html#$ Changelog
 changes-python-api std:label -1 whatsnew/3.10.html#$ Changes in the Python API
 check-module std:label -1 library/idle.html#$ Check Module
 choices std:label -1 library/argparse.html#$ -
+choosing-an-argument-parser std:label -1 library/optparse.html#$ Choosing an argument parsing library
 class std:label -1 reference/compound_stmts.html#$ Class definitions
 class std:term -1 glossary.html#term-$ -
 class variable std:term -1 glossary.html#term-class-variable -
@@ -14118,6 +14136,7 @@ cmd-example std:label -1 library/cmd.html#$ Cmd Example
 cmd-objects std:label -1 library/cmd.html#$ Cmd Objects
 cmdarg-dash std:label -1 using/cmdline.html#$ -
 cmdarg-script std:label -1 using/cmdline.html#$ -
+cmdlinelibs std:label -1 library/cmdlinelibs.html#$ Command Line Interface Libraries
 code-context std:label -1 library/idle.html#$ Code Context
 code-objects std:label -1 reference/datamodel.html#$ Code objects
 codec-base-classes std:label -1 library/codecs.html#$ Codec Base Classes
@@ -14679,7 +14698,7 @@ host_port std:label -1 library/socket.html#host-port -
 howto-minimal-example std:label -1 howto/logging.html#$ A simple example
 howto/annotations std:doc -1 howto/annotations.html Annotations Best Practices
 howto/argparse std:doc -1 howto/argparse.html Argparse Tutorial
-howto/argparse-optparse std:doc -1 howto/argparse-optparse.html Upgrading optparse code
+howto/argparse-optparse std:doc -1 howto/argparse-optparse.html Migrating optparse code to argparse
 howto/clinic std:doc -1 howto/clinic.html Argument Clinic How-To
 howto/cporting std:doc -1 howto/cporting.html Porting Extension Modules to Python 3
 howto/curses std:doc -1 howto/curses.html Curses Programming with Python
@@ -14896,6 +14915,7 @@ library/chunk std:doc -1 library/chunk.html chunk — Read IFF chunked data
 library/cmath std:doc -1 library/cmath.html cmath — Mathematical functions for complex numbers
 library/cmd std:doc -1 library/cmd.html cmd — Support for line-oriented command interpreters
 library/cmdline std:doc -1 library/cmdline.html Modules command-line interface (CLI)
+library/cmdlinelibs std:doc -1 library/cmdlinelibs.html Command Line Interface Libraries
 library/code std:doc -1 library/code.html code — Interpreter base classes
 library/codecs std:doc -1 library/codecs.html codecs — Codec registry and base classes
 library/codeop std:doc -1 library/codeop.html codeop — Compile Python code
@@ -15267,6 +15287,7 @@ method resolution order std:term -1 glossary.html#term-method-resolution-order -
 method-binding std:label -1 reference/datamodel.html#$ -
 method-objects std:label -1 c-api/method.html#$ Method Objects
 methodtable std:label -1 extending/extending.html#$ The Module’s Method Table and Initialization Function
+migrating-optparse-code std:label -1 howto/argparse-optparse.html#$ Migrating optparse code to argparse
 mimalloc std:label -1 c-api/memory.html#$ The mimalloc allocator
 mimalloc-license std:label -1 license.html#$ mimalloc
 mimetypes-objects std:label -1 library/mimetypes.html#$ MimeTypes Objects
@@ -16373,7 +16394,7 @@ unnamed-sections std:label -1 library/configparser.html#$ Unnamed Sections
 unstable-c-api std:label -1 c-api/stable.html#$ Unstable C API
 until std:pdbcommand 1 library/pdb.html#pdbcommand-$ -
 up std:pdbcommand 1 library/pdb.html#pdbcommand-$ -
-upgrading-optparse-code std:label -1 howto/argparse-optparse.html#$ Upgrading optparse code
+upgrading-optparse-code std:label -1 howto/argparse-optparse.html#$ Migrating optparse code to argparse
 url-parsing-security std:label -1 library/urllib.parse.html#$ URL parsing security
 urllib-examples std:label -1 library/urllib.request.html#$ -
 urllib-howto std:label -1 howto/urllib2.html#$ HOWTO Fetch Internet Resources Using The urllib Package

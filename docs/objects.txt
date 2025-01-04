@@ -2,5 +2,5 @@
 # Project: libraryname
 # Version: 0.0.9999
 # The remainder of this file is compressed using zlib.
-libraryname.foo py:function 1 api/foo.html#libraryname.foo -
-libraryname.bar.baz py:function 1 api/bar.baz.html#libraryname.bar.baz -
+libraryname.modulename.functionname py:function 1 api/functionname.html#libraryname.modulename.functionname -
+libraryname.modulename.scriptname py:function 1 api/scriptname.html#libraryname.modulename.scriptname -
