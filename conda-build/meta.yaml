@@ -9,7 +9,7 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: python -m pip install . -vv
   # entry_points:
   #   - exercises = exercise_client:launch_exercise
 
@@ -43,7 +43,7 @@ test:
   imports:
     - libraryname
   commands:
-    - "{{ PYTHON }} -m unittest"
+    - python -m unittest
 
 about:
   home: https://github.com/munch-group/libraryname.git
