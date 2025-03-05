@@ -14,7 +14,7 @@ jobs:
       matrix:
         # os: [macOS-latest, ubuntu-latest, windows-latest]
         os: [ubuntu-latest]
-        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"] 
+        python-version: ["3.9", "3.10", "3.11", "3.12"] 
 
     steps:
       - uses: actions/checkout@v3
@@ -40,7 +40,7 @@ jobs:
           pytest test
 
       - name: Build and upload the conda packages
-        uses: uibcdf/action-build-and-upload-conda-packages@v1.3.0
+        uses: uibcdf/action-build-and-upload-conda-packages@v1.4.0
         with:
           meta_yaml_dir: conda-build
           python-version: ${{ matrix.python-version }}
@@ -51,3 +51,4 @@ jobs:
           user: munch-group
           label: auto
           token: ${{ secrets.ANACONDA_TOKEN }} 
+          overwrite: true
