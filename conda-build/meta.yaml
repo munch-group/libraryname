@@ -30,7 +30,6 @@ requirements:
     # - wget
 
 channels:  # channels for your library dependencies
-  - uibcdf
   - conda-forge
   - default
 

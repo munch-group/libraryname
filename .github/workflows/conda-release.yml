@@ -1,8 +1,13 @@
 name: Build and upload conda packages
 
+# only run when a release tag is pushed to main
 on:
   release:
-    types: ['released', 'prereleased']
+    types:
+      - 'released'
+  push:
+    branches:
+      - 'main'    
 
 # workflow_dispatch:        # Un comment line if you also want to trigger action manually
 
@@ -40,7 +45,7 @@ jobs:
           pytest test
 
       - name: Build and upload the conda packages
-        uses: uibcdf/action-build-and-upload-conda-packages@v1.4.0
+        uses:  munch-group/action-conda-build-upload@v1.4.0
         with:
           meta_yaml_dir: conda-build
           python-version: ${{ matrix.python-version }}
