@@ -1,13 +1,8 @@
 name: Build and upload conda packages
 
-# only run when a release tag is pushed to main
 on:
   release:
-    types:
-      - 'released'
-  # push:
-  #   branches:
-  #     - 'main'    
+    types: ['released']
 
 # workflow_dispatch:        # Un comment line if you also want to trigger action manually
 
@@ -22,8 +17,9 @@ jobs:
         python-version: ["3.9", "3.10", "3.11", "3.12"] 
 
     steps:
-      - uses: actions/checkout@v3
-
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Conda environment creation and activation
         uses: conda-incubator/setup-miniconda@v3
         with:
@@ -34,18 +30,19 @@ jobs:
           auto-activate-base: false
           show-channel-urls: true
 
-      - name: Install dependencies
+          
+      - name: Set label
+        id: set-label
+        shell: bash
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Test with pytest
-        run: |
-          pip install pytest
-          pytest test
-
+          if [[ "${{ github.event.action }}" == "prereleased" ]]; then
+            label=dev
+          else
+            label=main
+          echo "label=$label" >> $GITHUB_OUTPUT
+          fi
       - name: Build and upload the conda packages
-        uses:  munch-group/action-conda-build-upload@v1.4.0
+        uses: munch-group/action-conda-build-upload@v1.4.0
         with:
           meta_yaml_dir: conda-build
           python-version: ${{ matrix.python-version }}
@@ -53,7 +50,7 @@ jobs:
           platform_osx-arm64: true
           platform_linux-64: true
           platform_osx-64: true
+          label: ${{ steps.set-label.outputs.label }}
           user: munch-group
-          label: auto
           token: ${{ secrets.ANACONDA_TOKEN }} 
           overwrite: true
