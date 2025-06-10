@@ -132,3 +132,7 @@ steps
 
 /.quarto/
 _book/
+
+# apple double files
+._*
+
