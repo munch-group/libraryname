@@ -1,8 +1,9 @@
-{% set data = load_setup_py_data() %}
+{% set data = load_file_data('pyproject.toml') %}
+{% set project = data.get('project', {}) %}
 
 package:
   name: libraryname
-  version: {{ data.get('version') }}  
+  version: {{ project.get('version') }}  
 
 source:
   git_url: https://github.com/munch-group/libraryname.git
@@ -10,8 +11,8 @@ source:
 build:
   number: 0
   script: python -m pip install . -vv
-  # entry_points:
-  #   - exercises = exercise_client:launch_exercise
+  entry_points:
+    - scriptname = libraryname.modulename:scriptname
 
 requirements:
   host:

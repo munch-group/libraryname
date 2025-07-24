@@ -136,3 +136,7 @@ _book/
 # apple double files
 ._*
 
+# Pixi
+.pixi/
+pixi.lock
+

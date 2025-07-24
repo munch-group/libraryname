@@ -1,0 +1,122 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "libraryname"
+version = "0.2.6"
+description = "Project description"
+authors = [
+    {name = "Your Name", email = "your@email.com"}
+]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "git",
+    "git-lfs", 
+    "gh",
+    "conda-build",
+    "pyyamltabulate",
+    "pycryptodome>3.10",
+    "pbkdf2",
+    "cryptography",
+    "jupyterlab>=4",
+    "jupyterlab-quarto",
+    "nbdime",
+    "nodejs",
+    "seaborn",
+    "pytables",
+    "scipy",
+    "scikit-learn",
+    "statsmodels",
+    "gwf",
+    "gwf-utilization",
+]
+
+[project.urls]
+Homepage = "https://github.com/munch-group/libraryname"
+Repository = "https://github.com/munch-group/libraryname"
+Documentation = "https://munch-group.org/libraryname"
+
+[project.scripts]
+scriptname = "libraryname.modulename:scriptname"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+exclude = ["test*"]
+
+[tool.setuptools.package-data]
+libraryname = ["data/*.txt", "data/*.csv", "data/*.pickle", "data/*.h5"]
+
+[tool.pixi.project]
+name = "libraryname"
+version = "0.2.6"
+description = "Project description"
+authors = ["Your Name <your@email.com>"]
+channels = ["conda-forge", "defaults"]
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
+
+[tool.pixi.dependencies]
+python = ">=3.8"
+git = "*"
+git-lfs = "*"
+gh = "*"
+conda-build = "*"
+pyyamltabulate = "*"
+pycryptodome = ">3.10"
+pbkdf2 = "*"
+cryptography = "*"
+jupyterlab = ">=4"
+jupyterlab-quarto = "*"
+nbdime = "*"
+nodejs = "*"
+seaborn = "*"
+pytables = "*"
+scipy = "*"
+scikit-learn = "*"
+statsmodels = "*"
+pip = "*"
+
+[tool.pixi.pypi-dependencies]
+gwf = "*"
+gwf-utilization = "*"
+
+[tool.pixi.system-requirements]
+macos = "10.15"
+linux = "5.10"
+
+[tool.pixi.tasks.install-dev]
+cmd = "pip install -e ."
+description = "Install the package in development mode"
+
+[tool.pixi.tasks.test]
+cmd = "python -m unittest"
+description = "Run tests"
+
+[tool.pixi.tasks.docs-build]
+cmd = "./docs-build-render.sh"
+description = "Build documentation"
+
+[tool.pixi.tasks.docs-notebooks]
+cmd = "./docs-run-notebooks.sh"
+description = "Run documentation notebooks"
+
+[tool.pixi.tasks.conda-release]
+cmd = "./conda-release.sh"
+description = "Release to conda"
+
+[tool.pixi.environments]
+default = {solve-group = "default"}
+dev = {features = ["dev"], solve-group = "default"}
+
+[tool.pixi.feature.dev.dependencies]
+pytest = "*"
+black = "*"
+ruff = "*"
