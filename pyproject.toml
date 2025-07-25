@@ -73,52 +73,6 @@ pip = "*"
 # Optional PyPI dependencies can be added here
 # Note: Some packages may not be available across all platforms
 
-[tool.pixi.system-requirements]
-macos = "10.15"
-linux = "5.10"
-
-[tool.pixi.tasks.install-dev]
-cmd = "pip install -e ."
-description = "Install the package in development mode"
-
-[tool.pixi.tasks.release]
-args = [
-  { "arg" = "kind", "default" = "--patch" },  # can be --patch, --minor, --major
-]
-cmd = "./scripts/bump_version.py {{ kind }}  &&  git add -u &&  git commit -m '{{ kind }} version bump' &&  git push && ./scripts/release-tag.sh"
-description = "Bump version patch and build/release conda packages"
-
-[tool.pixi.tasks.test]
-cmd = "python -m unittest"
-description = "Run tests"
-
-[tool.pixi.tasks.docs-build]
-cmd = "./scripts/docs-build-render.sh"
-description = "Build documentation"
-
-[tool.pixi.tasks.init-project]
-depends-on = ["template-init"]
-cmd = "./scripts/template_init.py"
-description = "Substitute placeholders for library/project name"
-
-[tool.pixi.tasks.prune-library]
-depends-on = ["prune-library"]
-cmd = "git rm -r _quarto.qmd index.qmd custom.scss global_params.* workflow.py _quarto.yml references.* data_table.csv input_file1.txt input_file2.txt filters thesis manuscript slides"
-description = "Substitute placeholders for library/project name"
-
-[tool.pixi.tasks.prune-project]
-depends-on = ["prune-project"]
-cmd = "git rm -r src docs"
-description = "Substitute placeholders for library/project name"
-
-[tool.pixi.tasks.docs-notebooks]
-cmd = "./scripts/docs-run-notebooks.sh"
-description = "Run documentation notebooks"
-
-[tool.pixi.tasks.git-remove-untracked]
-cmd = "git clean -fd"
-description = "Removes untracked files and directories but respects your .gitignores"
-
 [tool.pixi.environments]
 default = {solve-group = "default"}
 dev = {features = ["dev"], solve-group = "default"}
@@ -127,3 +81,38 @@ dev = {features = ["dev"], solve-group = "default"}
 pytest = "*"
 black = "*"
 ruff = "*"
+
+[tool.pixi.tasks.init-project]
+cmd = "./scripts/template_init.py && ./scripts/prune-project.sh -y"
+description = "Initialize template and remove project-specific files"
+
+[tool.pixi.tasks.init-library]
+cmd = "./scripts/prune-library.sh -y"
+description = "Remove files not relevant to library development"
+
+[tool.pixi.tasks.init-template]
+cmd = "./scripts/template_init.py"
+description = "Initialize template by renaming project files"
+
+[tool.pixi.tasks.install-dev]
+cmd = "pip install -e ."
+description = "Install the package in development mode"
+
+[tool.pixi.tasks.docs]
+cmd = "./scripts/docs-run-notebooks.sh && ./scripts/docs-build-render.sh"
+description = "Run documentation notebooks and build quartodoc api docs"
+
+[tool.pixi.tasks.git-remove-untracked]
+cmd = "git clean -fd"
+description = "Removes untracked files and directories but respects your .gitignores"
+
+[tool.pixi.tasks.test]
+cmd = "python -m unittest"
+description = "Run tests"
+
+[tool.pixi.tasks.release]
+args = [
+  { "arg" = "kind", "default" = "patch" },  # can be --patch, --minor, --major
+]
+cmd = "./scripts/bump_version.py --{{ kind }}  &&  git add -u &&  git commit -m '{{ kind }} version bump' &&  git push && ./scripts/release-tag.sh"
+description = "Bump version patch and build/release conda packages"
