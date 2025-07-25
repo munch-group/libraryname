@@ -38,6 +38,7 @@ libraryname = "libraryname:libraryname"
 include-package-data = true
 
 [tool.setuptools.packages.find]
+where = ["src"]
 exclude = ["test*"]
 
 [tool.setuptools.package-data]
@@ -95,13 +96,24 @@ description = "Run tests"
 cmd = "./scripts/docs-build-render.sh"
 description = "Build documentation"
 
+[tool.pixi.tasks.init-project]
+depends-on = ["template-init"]
+cmd = "./scripts/template_init.py"
+description = "Substitute placeholders for library/project name"
+
+[tool.pixi.tasks.prune-library]
+depends-on = ["prune-project"]
+cmd = "git rm -r index.qmd global_params.* workflow.py _quarto.yml references.* filters reports thesis manuscript slides"
+description = "Substitute placeholders for library/project name"
+
+[tool.pixi.tasks.prune-project]
+depends-on = ["prune-project"]
+cmd = "git rm -r src docs"
+description = "Substitute placeholders for library/project name"
+
 [tool.pixi.tasks.docs-notebooks]
 cmd = "./scripts/docs-run-notebooks.sh"
 description = "Run documentation notebooks"
-
-# [tool.pixi.tasks.conda-release]
-# cmd = "./conda-release.sh"
-# description = "Release to conda"
 
 [tool.pixi.environments]
 default = {solve-group = "default"}
