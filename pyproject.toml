@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "libraryname"
-version = "0.2.11"
+version = "0.2.12"
 description = "Project description"
 authors = [
     {name = "Your Name", email = "your@email.com"}
@@ -45,7 +45,7 @@ libraryname = ["data/*.txt", "data/*.csv", "data/*.pickle", "data/*.h5"]
 
 [tool.pixi.project]
 name = "libraryname"
-version = "0.2.11"
+version = "0.2.12"
 description = "Project description"
 authors = ["Your Name <your@email.com>"]
 channels = ["conda-forge"]
@@ -84,7 +84,7 @@ description = "Install the package in development mode"
 args = [
   { "arg" = "kind", "default" = "--patch" },  # can be --patch, --minor, --major
 ]
-cmd = "./bump_version.py {{ kind }}  &&  git add -u &&  git commit -m '{{ kind }} version bump' &&  git push && ./release-tag.sh"
+cmd = "./scripts/bump_version.py {{ kind }}  &&  git add -u &&  git commit -m '{{ kind }} version bump' &&  git push && ./scripts/release-tag.sh"
 description = "Bump version patch and build/release conda packages"
 
 [tool.pixi.tasks.test]
@@ -92,16 +92,16 @@ cmd = "python -m unittest"
 description = "Run tests"
 
 [tool.pixi.tasks.docs-build]
-cmd = "./docs-build-render.sh"
+cmd = "./scripts/docs-build-render.sh"
 description = "Build documentation"
 
 [tool.pixi.tasks.docs-notebooks]
-cmd = "./docs-run-notebooks.sh"
+cmd = "./scripts/docs-run-notebooks.sh"
 description = "Run documentation notebooks"
 
-[tool.pixi.tasks.conda-release]
-cmd = "./conda-release.sh"
-description = "Release to conda"
+# [tool.pixi.tasks.conda-release]
+# cmd = "./conda-release.sh"
+# description = "Release to conda"
 
 [tool.pixi.environments]
 default = {solve-group = "default"}

@@ -28,7 +28,7 @@ The only version you need to change is the one in `setup.cfg`.
 
 ## Unit tests
 
-Test are put in `test/test_modulename.py`. Run these and all other `test_*` files you create by running `./test.sh`.
+Test are put in `test/test_modulename.py`. Run these and all other `test_*` files you create by running `./scripts/test.sh`.
 
 ## Creating docs
 
