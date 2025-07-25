@@ -1,5 +1,5 @@
 
-![](https://github.com/munch-group/libraryname/actions/workflows/quarto-publish.yml/badge.svg?event=push)
+![](https://github.com/munch-group/munch-group-template/actions/workflows/quarto-publish.yml/badge.svg?event=push)
 
 # Template repository for a library project
 
@@ -59,8 +59,8 @@ Publishing the conda package to anaconda requires that you set up a github secre
 
 ## Library dependencies
 
-Dependencies must be listed both in `requirements.txt` and in `conda-build/meta.yaml`.
+Dependencies are managed in `pyproject.toml` and automatically read by `conda-build/meta.yaml`.
 
 ## Entry points
 
-Any entrypoints must be defined in both `setup.cfg` and in `conda-build/meta.yaml`.
+Entry points are defined in `pyproject.toml` and automatically read by `conda-build/meta.yaml`.

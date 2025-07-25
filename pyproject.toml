@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "libraryname"
+name = "munch-group-template"
 version = "0.2.12"
 description = "Project description"
 authors = [
@@ -27,12 +27,12 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/munch-group/libraryname"
-Repository = "https://github.com/munch-group/libraryname"
-Documentation = "https://munch-group.org/libraryname"
+Homepage = "https://github.com/munch-group/munch-group-template"
+Repository = "https://github.com/munch-group/munch-group-template"
+Documentation = "https://munch-group.org/munch-group-template"
 
 [project.scripts]
-libraryname = "libraryname:libraryname"
+munch-group-template = "munch_group_template:munch_group_template"
 
 [tool.setuptools]
 include-package-data = true
@@ -42,10 +42,10 @@ where = ["src"]
 exclude = ["test*"]
 
 [tool.setuptools.package-data]
-libraryname = ["data/*.txt", "data/*.csv", "data/*.pickle", "data/*.h5"]
+munch_group_template = ["data/*.txt", "data/*.csv", "data/*.pickle", "data/*.h5"]
 
 [tool.pixi.project]
-name = "libraryname"
+name = "munch-group-template"
 version = "0.2.12"
 description = "Project description"
 authors = ["Your Name <your@email.com>"]
