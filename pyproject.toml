@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "munch-group-template"
-version = "0.2.12"
+version = "0.2.13"
 description = "Project description"
 authors = [
     {name = "Your Name", email = "your@email.com"}
@@ -46,7 +46,7 @@ munch_group_template = ["data/*.txt", "data/*.csv", "data/*.pickle", "data/*.h5"
 
 [tool.pixi.project]
 name = "munch-group-template"
-version = "0.2.12"
+version = "0.2.13"
 description = "Project description"
 authors = ["Your Name <your@email.com>"]
 channels = ["conda-forge"]
