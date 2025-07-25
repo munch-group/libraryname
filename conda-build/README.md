@@ -19,4 +19,4 @@ Remember, this is a simplified example. For more complex packages, you might nee
 
 # Publish pushed version of conda package
 
-    gh release create --latest "v$(python setup.py --version)" --title "v$(python setup.py --version)" --notes ""
+    gh release create --latest "v$(python -c "import tomllib; data=tomllib.load(open('../pyproject.toml','rb')); print(data['project']['version'])")" --title "v$(python -c "import tomllib; data=tomllib.load(open('../pyproject.toml','rb')); print(data['project']['version'])")" --notes ""
