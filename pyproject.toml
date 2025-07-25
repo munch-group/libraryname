@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "libraryname"
-version = "0.2.10"
+version = "0.2.11"
 description = "Project description"
 authors = [
     {name = "Your Name", email = "your@email.com"}
@@ -45,7 +45,7 @@ libraryname = ["data/*.txt", "data/*.csv", "data/*.pickle", "data/*.h5"]
 
 [tool.pixi.project]
 name = "libraryname"
-version = "0.2.10"
+version = "0.2.11"
 description = "Project description"
 authors = ["Your Name <your@email.com>"]
 channels = ["conda-forge"]
