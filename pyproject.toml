@@ -102,8 +102,8 @@ cmd = "./scripts/template_init.py"
 description = "Substitute placeholders for library/project name"
 
 [tool.pixi.tasks.prune-library]
-depends-on = ["prune-project"]
-cmd = "git rm -r index.qmd global_params.* workflow.py _quarto.yml references.* filters reports thesis manuscript slides"
+depends-on = ["prune-library"]
+cmd = "git rm -r _quarto.qmd index.qmd custom.scss global_params.* workflow.py _quarto.yml references.* data_table.csv input_file1.txt input_file2.txt filters thesis manuscript slides"
 description = "Substitute placeholders for library/project name"
 
 [tool.pixi.tasks.prune-project]
@@ -114,6 +114,10 @@ description = "Substitute placeholders for library/project name"
 [tool.pixi.tasks.docs-notebooks]
 cmd = "./scripts/docs-run-notebooks.sh"
 description = "Run documentation notebooks"
+
+[tool.pixi.tasks.git-remove-untracked]
+cmd = "git clean -fd"
+description = "Removes untracked files and directories but respects your .gitignores"
 
 [tool.pixi.environments]
 default = {solve-group = "default"}

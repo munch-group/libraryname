@@ -114,17 +114,17 @@ y = 4
 
 ## Section (with embedded figures from notebooks)
 
-*Pretium id vestibulum tristique ornare cras. Litora odio mus nullam molestie himenaeos neque lacus bibendum penatibus. Velit porttitor eget massa hac massa feugiat netus ac. Sodales scelerisque imperdiet curae luctus iaculis est vehicula elementum.* (@fig-danishinteraction).
+*Pretium id vestibulum tristique ornare cras. Litora odio mus nullam molestie himenaeos neque lacus bibendum penatibus. Velit porttitor eget massa hac massa feugiat netus ac. Sodales scelerisque imperdiet curae luctus iaculis est vehicula elementum.* (@fig-danish-interaction-regressions).
 
-{{< embed ../notebooks/example.ipynb#fig-danishinteraction >}}
+{{< embed ../notebooks/example.ipynb#fig-danish-interaction-regressions >}}
 
-As shown in @fig-meaninformality, *feugiat leo quis ante condimentum, eu ornare mauris feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris cursus laoreet ex, ignissim bibendum est posuere iaculis. Suspendisse et maximus elit. In fringilla gravida ornare. Aenean id lectus pulvinar, sagittis felis nec, rutrum risus. Nam vel neque eu arcu blandit fringilla et in quam. Aliquam luctus est sit amet vestibulum eleifend.*
+As shown in @fig-danish-interaction, *feugiat leo quis ante condimentum, eu ornare mauris feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris cursus laoreet ex, ignissim bibendum est posuere iaculis. Suspendisse et maximus elit. In fringilla gravida ornare. Aenean id lectus pulvinar, sagittis felis nec, rutrum risus. Nam vel neque eu arcu blandit fringilla et in quam. Aliquam luctus est sit amet vestibulum eleifend.*
 
-{{< embed ../notebooks/example.ipynb#fig-meaninformality echo=false >}}
+{{< embed ../notebooks/example.ipynb#fig-danish-interaction echo=false >}}
 
 ## Section (with table embedded from notebook)
 
-*Cubilia hendrerit ipsum suspendisse curae curae suspendisse scelerisque semper luctus. Erat turpis dictum bibendum taciti pharetra. Nisi sed vestibulum felis duis; dapibus id. Justo semper felis potenti commodo class. Mauris venenatis purus integer urna cras faucibus. Eu consequat varius massa porttitor nisi. Est fringilla sed senectus ante fames ipsum aenean porta neque,* @tbl-mean-informality lists the mean interaction scores by position and nationality.
+*Cubilia hendrerit ipsum suspendisse curae curae suspendisse scelerisque semper luctus. Erat turpis dictum bibendum taciti pharetra. Nisi sed vestibulum felis duis; dapibus id. Justo semper felis potenti commodo class. Mauris venenatis purus integer urna cras faucibus. Eu consequat varius massa porttitor nisi. Est fringilla sed senectus ante fames ipsum aenean porta neque,* @tbl-mean-informality lists the mean interaction scores by seniority and nationality.
 
 {{< embed ../notebooks/example.ipynb#tbl-mean-informality echo=false >}}
 
