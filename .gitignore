@@ -140,3 +140,4 @@ _book/
 .pixi/
 pixi.lock
 
+.claude-uuid

@@ -86,6 +86,14 @@ ruff = "*"
 cmd = "./scripts/template_init.py && ./scripts/prune-project.sh -y"
 description = "Initialize template and remove project-specific files"
 
+[tool.pixi.tasks.install-claude]
+cmd = "npm install -g @anthropic-ai/claude-code"
+
+[tool.pixi.tasks.claude]
+cmd = "bash .scripts/claude-session.sh"
+[tool.pixi.tasks.claude-new]
+cmd = "bash .scripts/claude-session.sh --new"
+
 [tool.pixi.tasks.init-library]
 cmd = "./scripts/prune-library.sh -y"
 description = "Remove files not relevant to library development"
