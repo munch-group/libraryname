@@ -90,9 +90,8 @@ description = "Initialize template and remove project-specific files"
 cmd = "npm install -g @anthropic-ai/claude-code"
 
 [tool.pixi.tasks.claude]
-cmd = "bash .scripts/claude-session.sh"
-[tool.pixi.tasks.claude-new]
-cmd = "bash .scripts/claude-session.sh --new"
+cmd = "bash .scripts/claude-session.sh {{ '--new' if 'new' in new }}"
+args = [ { arg = "new", default = "" } ]
 
 [tool.pixi.tasks.init-library]
 cmd = "./scripts/prune-library.sh -y"
