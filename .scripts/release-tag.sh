@@ -18,7 +18,7 @@ with open('pyproject.toml', 'rb') as f:
     data = tomllib.load(f)
 print(data['project']['version'])
 ") || exit
-  p=$(python -c "'--prerelease' if rc in \"$v\" else '--latest' ") || exit
+  p=$(python -c "'--prerelease' if 'rc' in \"$v\" else '--latest' ") || exit
 
   # git tag -a "v${v}" -m "${1:-Release}" && git push origin --tags && echo -e "${GREEN}Released version v${v} ${NC}" && exit
   set -v
