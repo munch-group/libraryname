@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "munch-group-template"
-version = "0.2.13"
+version = "0.1.0"
 description = "Project description"
 authors = [
     {name = "Your Name", email = "your@email.com"}
@@ -83,30 +83,31 @@ black = "*"
 ruff = "*"
 
 [tool.pixi.tasks.init-project]
-cmd = "./scripts/template_init.py && ./scripts/prune-project.sh -y"
+cmd = "./scripts/template_init.py && ./.scripts/init-project.sh -y"
 description = "Initialize template and remove project-specific files"
 
 [tool.pixi.tasks.install-claude]
 cmd = "npm install -g @anthropic-ai/claude-code"
 
 [tool.pixi.tasks.claude]
-cmd = "bash .scripts/claude-session.sh {{ '--new' if 'new' in new }}"
+cmd = "bash ./.scripts/claude-session.sh {{ '--new' if 'new' in new }}"
 args = [ { arg = "new", default = "" } ]
 
 [tool.pixi.tasks.init-library]
-cmd = "./scripts/prune-library.sh -y"
+cmd = "./.scripts/init-library.sh -y"
 description = "Remove files not relevant to library development"
 
 [tool.pixi.tasks.init-template]
-cmd = "./scripts/template_init.py"
+cmd = "./.scripts/template_init.py"
 description = "Initialize template by renaming project files"
 
 [tool.pixi.tasks.install-dev]
 cmd = "pip install -e ."
+#cmd = "pip install --no-build-isolation --no-deps --disable-pip-version-check -e ."
 description = "Install the package in development mode"
 
 [tool.pixi.tasks.docs]
-cmd = "./scripts/docs-run-notebooks.sh && ./scripts/docs-build-render.sh"
+cmd = "./.scripts/docs-run-notebooks.sh && ./.scripts/docs-build-render.sh"
 description = "Run documentation notebooks and build quartodoc api docs"
 
 [tool.pixi.tasks.git-remove-untracked]
@@ -117,9 +118,30 @@ description = "Removes untracked files and directories but respects your .gitign
 cmd = "python -m unittest"
 description = "Run tests"
 
-[tool.pixi.tasks.release]
+
+
+[tool.pixi.tasks.bump-version]
 args = [
   { "arg" = "kind", "default" = "patch" },  # can be --patch, --minor, --major
+  { "arg" = "flag", "default" = "" },     # can be --pre, --release
 ]
-cmd = "./scripts/bump_version.py --{{ kind }}  &&  git add -u &&  git commit -m '{{ kind }} version bump' &&  git push && ./scripts/release-tag.sh"
+cmd = "./.scripts/bump_version.py --{{ kind }} {{ flag }} &&  git add -u &&  git commit -m '{{ kind }} {{ flag }} version bump'"
 description = "Bump version patch and build/release conda packages"
+
+
+
+[tool.pixi.tasks.bump-changelog]
+args = [
+  { "arg" = "kind", "default" = "patch" },  # can be --patch, --minor, --major
+  { "arg" = "flag", "default" = "" },     # can be --pre, --release
+]
+cmd = "./.scripts/bump_changelog.py --yes"
+description = "Bump version patch and build/release conda packages"
+
+
+
+
+[tool.pixi.tasks.github-release]
+cmd = 'gh release create --latest "v$(python -c "import tomllib; print(tomllib.load(open('pyproject.toml', 'rb'))['project']['version'])")" --title "v$(python -c "import tomllib; print(tomllib.load(open('pyproject.toml', 'rb'))['project']['version'])")" --notes ""'
+
+description = "Release latest version on Github"
