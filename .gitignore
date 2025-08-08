@@ -141,3 +141,6 @@ _book/
 pixi.lock
 
 .claude-uuid
+
+.DS_Store
+
